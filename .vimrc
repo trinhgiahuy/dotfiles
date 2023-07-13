@@ -1,19 +1,8 @@
-" turn hybrid line numbers on
-:set number relativenumber
-:set nu rnu
-"
-" " turn hybrid line numbers off
-:set nonumber norelativenumber
-:set nonu nornu
-"
-" " toggle hybrid line numbers
-:set number! relativenumber!
-:set nu! rnu!
-
-
+set number relativenumber
+set nu rnu
 set autoindent
 
-n for command mode
+"for command mode
 nnoremap <S-Tab> <<" 
 " for insert mode
 inoremap <S-Tab> <C-d>
