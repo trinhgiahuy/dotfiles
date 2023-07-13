@@ -2,6 +2,15 @@ set number relativenumber
 set nu rnu
 set autoindent
 
+
+"Delete word backward in insert mode with Ctrl+Backspace
+" inoremap <C-BS> <C-o>b
+
+ 
+"wq for :wq in normal mode
+nnoremap wq :wq<CR>
+noremap q :q!<CR>
+
 "for command mode
 nnoremap <S-Tab> <<" 
 " for insert mode
@@ -17,10 +26,12 @@ vnoremap <silent> <C-S> <C-C>:update<CR>
 
 
 " Move in insert mode like normal mode
-inoremap <c-j> <down>
+inoremap <c-h> <left>
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
+inoremap <C-w> <C-o>w
+inoremap <C-b> <C-o>b
 
 " Go beging of line in insert mode
 inoremap <C-i> <Home>
@@ -32,7 +43,10 @@ inoremap <C-e> <End>
 "Delete word after in normal mode
 inoremap <C-q> <ESC>ldei
 
+inoremap <S-B> <C-o>db
+inoremap <S-W> <C-o>daw
 "====================================END OF MY CONFIG======================
+
 " Sets how many lines of history VIM has to remember
 set history=500
 "
